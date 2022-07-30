@@ -2,28 +2,20 @@ import java.util.Scanner;
 
 public class PerfectNumber {
 	public static void main(String[] args) {
-		int num;
+		int sum = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter any integer number:");
 		num = sc.nextInt();
-		printPerfectNum(num);
-		
-	}
-
-	static void printPerfectNum(int n) {
-		int sum = 1;
-		for(int i = 2; i < n; i++) {
-			if(n % i == 0)
+		for(int i = 1; i < num; i++) {
+			if(num % i == 0)
 			{
-				sum += i; //sum = sum + i
+				sum = sum + i;
 			}
 		}
 		
-		if(sum == n)
-			System.out.println(n + " is Perfect Number");
+		if(sum == num)
+			System.out.println(num + " is a Perfect Number");
 		else
-			System.out.println(n + " is Not Perfect Number");
-		
-		
+			System.out.println(num + " is Not Perfect Number");	
 	}
 }
